@@ -919,5 +919,52 @@
 
     <!-- Main JS Application script module -->
     <script type="module" src="/src/main.tsx"></script>
+  <!-- Place this right above </body> -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const navButtons = document.querySelectorAll('.nav-btn, .mobile-nav-btn, .cta-nav-btn');
+        const tabs = document.querySelectorAll('.tab-content');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileNavPanel = document.getElementById('mobile-nav-panel');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+
+        function switchTab(tabId) {
+          tabs.forEach(tab => {
+            tab.classList.toggle('hidden', tab.id !== `tab-${tabId}`);
+          });
+
+          document.querySelectorAll('.nav-btn').forEach(btn => {
+            const indicator = btn.querySelector('.nav-indicator');
+            const isActive = btn.getAttribute('data-tab') === tabId;
+            
+            btn.classList.toggle('text-blue-600', isActive);
+            btn.classList.toggle('font-bold', isActive);
+            btn.classList.toggle('text-gray-600', !isActive);
+            btn.classList.toggle('font-medium', !isActive);
+            if (indicator) indicator.classList.toggle('hidden', !isActive);
+          });
+
+          mobileNavPanel?.classList.add('hidden');
+          menuIconOpen?.classList.remove('hidden');
+          menuIconClose?.classList.add('hidden');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        navButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab') || button.getAttribute('data-goto');
+            if (targetTab) switchTab(targetTab);
+          });
+        });
+
+        menuBtn?.addEventListener('click', () => {
+          const isOpen = !mobileNavPanel.classList.contains('hidden');
+          mobileNavPanel.classList.toggle('hidden', isOpen);
+          menuIconOpen.classList.toggle('hidden', !isOpen);
+          menuIconClose.classList.toggle('hidden', isOpen);
+        });
+      });
+    </script>
   </body>
 </html>
