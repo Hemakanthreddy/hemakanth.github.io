@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hemakanth — Software Developer</title>
+<meta name="description" content="Portfolio of Hemakanth, Software Developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="#top" class="nav__brand">hemakanth<span class="accent">.</span>dev</a>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="#about"><span class="idx">01</span> about</a></li>
+    <li><a href="#stack"><span class="idx">02</span> stack</a></li>
+    <li><a href="#projects"><span class="idx">03</span> projects</a></li>
+    <li><a href="#experience"><span class="idx">04</span> experience</a></li>
+    <li><a href="#contact"><span class="idx">05</span> contact</a></li>
+  </ul>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">// software developer</p>
+      <h1 class="hero__title">Hemakanth<br><span class="accent">builds things</span> that run in production.</h1>
+      <p class="hero__sub">I design and ship reliable backend systems and clean, fast web interfaces — then write the tests so nobody has to find out the hard way.</p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View projects</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="terminal" role="img" aria-label="Terminal window introducing Hemakanth">
+      <div class="terminal__bar">
+        <span class="dot dot--red"></span>
+        <span class="dot dot--yellow"></span>
+        <span class="dot dot--green"></span>
+        <span class="terminal__title">hemakanth@dev: ~</span>
+      </div>
+      <div class="terminal__body" id="terminalBody">
+        <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+        <p class="out">Hemakanth — Software Developer</p>
+        <p><span class="prompt">$</span> <span class="cmd">cat focus.txt</span></p>
+        <p class="out">Backend systems, clean APIs, developer tooling.<br>Currently open to new opportunities.</p>
+        <p><span class="prompt">$</span> <span class="cmd" id="typedCmd"></span><span class="cursor" id="cursor">▌</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <p class="section__label"><span class="idx">01</span> about</p>
+    <div class="about">
+      <p class="about__lead">I'm a software developer who likes systems that are boring in the best way — predictable, observable, and easy for the next person to reason about.</p>
+      <p>I work across the stack, from data models and APIs to the interfaces people actually click on. I care about readable code, honest documentation, and shipping in small, reversible steps. Outside of work I'm usually reading changelogs, tinkering with side projects, or trying to shave another second off a build.</p>
+      <div class="about__facts">
+        <div class="fact">
+          <span class="fact__num">3+</span>
+          <span class="fact__label">years building software</span>
+        </div>
+        <div class="fact">
+          <span class="fact__num">10+</span>
+          <span class="fact__label">projects shipped</span>
+        </div>
+        <div class="fact">
+          <span class="fact__num">IN</span>
+          <span class="fact__label">based in India, remote-friendly</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section" id="stack">
+    <p class="section__label"><span class="idx">02</span> stack</p>
+    <h2 class="section__title">stack.json</h2>
+    <div class="stack-grid">
+      <div class="stack-group">
+        <h3>"languages"</h3>
+        <ul>
+          <li>JavaScript / TypeScript</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div class="stack-group">
+        <h3>"frameworks"</h3>
+        <ul>
+          <li>React / Next.js</li>
+          <li>Node.js / Express</li>
+          <li>Django / FastAPI</li>
+          <li>Spring Boot</li>
+        </ul>
+      </div>
+      <div class="stack-group">
+        <h3>"infra"</h3>
+        <ul>
+          <li>Docker</li>
+          <li>AWS / GCP</li>
+          <li>PostgreSQL / MongoDB</li>
+          <li>GitHub Actions</li>
+        </ul>
+      </div>
+      <div class="stack-group">
+        <h3>"tools"</h3>
+        <ul>
+          <li>Git</li>
+          <li>Figma</li>
+          <li>Postman</li>
+          <li>Linux</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <p class="section__label"><span class="idx">03</span> projects</p>
+    <h2 class="section__title">~/projects</h2>
+
+    <div class="projects">
+
+      <article class="project">
+        <div class="project__path">~/projects/01-project-name</div>
+        <h3 class="project__name">Project One <span class="project__tag">featured</span></h3>
+        <p class="project__desc">A one or two sentence description of what this project does, who it's for, and the problem it solves. Swap in your real project here.</p>
+        <ul class="project__stack">
+          <li>React</li><li>Node.js</li><li>PostgreSQL</li>
+        </ul>
+        <div class="project__links">
+          <a href="#" target="_blank" rel="noopener">Live site ↗</a>
+          <a href="#" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project__path">~/projects/02-project-name</div>
+        <h3 class="project__name">Project Two</h3>
+        <p class="project__desc">Description of the second project — what you built, the core technical challenge, and the outcome or impact.</p>
+        <ul class="project__stack">
+          <li>Python</li><li>FastAPI</li><li>Docker</li>
+        </ul>
+        <div class="project__links">
+          <a href="#" target="_blank" rel="noopener">Live site ↗</a>
+          <a href="#" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project__path">~/projects/03-project-name</div>
+        <h3 class="project__name">Project Three</h3>
+        <p class="project__desc">Description of the third project. Keep it specific: what it does, your role, and a result worth mentioning.</p>
+        <ul class="project__stack">
+          <li>TypeScript</li><li>Next.js</li><li>AWS</li>
+        </ul>
+        <div class="project__links">
+          <a href="#" target="_blank" rel="noopener">Live site ↗</a>
+          <a href="#" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project__path">~/projects/04-project-name</div>
+        <h3 class="project__name">Project Four</h3>
+        <p class="project__desc">A fourth project slot — remove or duplicate this card as needed to match how many projects you want to show.</p>
+        <ul class="project__stack">
+          <li>Java</li><li>Spring Boot</li><li>MySQL</li>
+        </ul>
+        <div class="project__links">
+          <a href="#" target="_blank" rel="noopener">Live site ↗</a>
+          <a href="#" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <p class="section__label"><span class="idx">04</span> experience</p>
+    <h2 class="section__title">git log --oneline</h2>
+
+    <div class="timeline">
+      <div class="commit">
+        <div class="commit__hash">a1b2c3d</div>
+        <div class="commit__body">
+          <div class="commit__head">
+            <h3>Software Developer — Company Name</h3>
+            <span class="commit__date">2024 — Present</span>
+          </div>
+          <p>Short description of your role and impact: what you built, owned, or improved. One or two lines is enough.</p>
+        </div>
+      </div>
+      <div class="commit">
+        <div class="commit__hash">e4f5g6h</div>
+        <div class="commit__body">
+          <div class="commit__head">
+            <h3>Software Engineer Intern — Company Name</h3>
+            <span class="commit__date">2023 — 2024</span>
+          </div>
+          <p>Short description of the internship — the team, the project, and a concrete outcome or thing you shipped.</p>
+        </div>
+      </div>
+      <div class="commit">
+        <div class="commit__hash">i7j8k9l</div>
+        <div class="commit__body">
+          <div class="commit__head">
+            <h3>B.Tech, Computer Science — University Name</h3>
+            <span class="commit__date">2020 — 2024</span>
+          </div>
+          <p>Relevant coursework, honors, or activities worth mentioning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--contact" id="contact">
+    <p class="section__label"><span class="idx">05</span> contact</p>
+    <h2 class="section__title">Let's build something.</h2>
+    <p class="contact__sub">Open to new roles, freelance work, and interesting problems. The fastest way to reach me is email.</p>
+    <a href="mailto:hello@hemakanth.dev" class="btn btn--primary btn--lg">hello@hemakanth.dev</a>
+    <div class="contact__links">
+      <a href="https://github.com/hemakanth" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/hemakanth" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Resume ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>designed &amp; built by Hemakanth · <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
