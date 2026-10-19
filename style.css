@@ -375,28 +375,22 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .commit__date { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); }
 .commit__body p { color: var(--text-muted); font-size: 0.94rem; max-width: 62ch; }
 
-/* Contact */
-.section--contact { text-align: left; }
-.contact__sub { color: var(--text-muted); max-width: 56ch; margin-bottom: 30px; }
-.contact__links {
-  display: flex;
-  gap: 24px;
-  margin-top: 26px;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-}
-.contact__links a { color: var(--text-muted); }
-.contact__links a:hover { color: var(--accent); }
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 32px 20px 48px;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--text-muted);
+/* Contact Section Interactive States */
+.contact-link:hover {
+  text-decoration: underline !important;
+  color: #58a6ff !important;
 }
 
+.nav-accent-link {
+  transition: all 0.2s ease-in-out;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.nav-accent-link:hover {
+  background-color: rgba(0, 255, 102, 0.1);
+  text-shadow: 0 0 8px rgba(0, 255, 102, 0.6);
+}
 /* ============================================
    Responsive
 ============================================ */
