@@ -378,39 +378,92 @@ main, .nav, .footer { position: relative; z-index: 1; }
 /* ============================================
    Contact Section
 ============================================ */
+/* ============================================
+   Contact Section Custom Overrides
+============================================ */
 #contact {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
-#contact .project {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+.contact-card {
+  max-width: 700px;
+  margin: 0 auto;
+  cursor: default;
 }
 
-/* Hover overrides for the contact card container */
-#contact .project:hover {
-  border-color: var(--border); /* Keeps container static */
-  transform: none;            /* Disables standard project card lift */
+/* Clear card animations for this unique layout panel */
+.contact-card:hover {
+  border-color: var(--border) !important;
+  transform: none !important;
 }
 
-/* Inline variable text link adjustments */
-#contact .accent:hover {
-  color: var(--accent-warm);
-  text-shadow: 0 0 8px rgba(57, 255, 20, 0.2);
+.contact-card__title {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem) !important;
+  margin-top: 12px;
+  margin-bottom: 14px;
 }
 
-/* Footer Link Array Animations */
-#contact .project__links a {
-  padding: 2px 6px;
+.contact-card__desc {
+  font-size: 1rem;
+  max-width: 54ch;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Technical Inner Code block */
+.contact-code-block {
+  background: var(--surface-2);
+  border: 1px dashed var(--border);
+  padding: 20px;
+  border-radius: var(--radius);
+  margin-bottom: 28px;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* Syntax Highlighting Tokens */
+.syntax-keyword { color: #F43F5E; } /* soft coral key declarations */
+.syntax-var     { color: #7DD3FC; } /* technical code variable sky-blue */
+.syntax-string  { color: var(--accent-warm); } /* utilizes amber token */
+.syntax-bracket { color: var(--text-muted); }
+
+/* Interactive Hover States */
+.contact-card__email {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.contact-card__email:hover {
+  opacity: 0.85;
+}
+
+.contact-card__links {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  font-size: 0.9rem;
+}
+
+.contact-card__links a {
+  padding: 4px 8px;
   border-radius: 4px;
   transition: all 0.2s ease;
+  margin: 0 2px;
 }
 
-#contact .project__links a:hover {
+.contact-card__links a:hover {
   background: var(--accent-dim);
   color: var(--accent);
   text-decoration: none;
+}
+
+.contact-card__links .contact-card__resume {
+  color: var(--text);
+}
+
+.contact-card__links .contact-card__resume:hover {
+  color: var(--accent);
 }
 
 /* ============================================
