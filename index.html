@@ -241,48 +241,25 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="section" id="contact" style="background-color: #0d1117; border-top: 1px solid #1f2937; padding: 60px 20px;">
-    <p class="section__label" style="font-family: 'JetBrains Mono', monospace; color: #8b949e; margin-bottom: 30px;"><span class="idx" style="color: #00ff66;">05</span> contact</p>
-    
-    <div class="contact-card" style="border: 1px solid #21262d; background-color: #161b22; padding: 40px; font-family: 'JetBrains Mono', monospace; border-radius: 6px; max-width: 700px; margin: 0 auto; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);">
-      
-      <!-- Terminal Header Panel -->
-      <div style="color: #8b949e; font-size: 13px; margin-bottom: 24px; border-bottom: 1px solid #21262d; padding-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
-        <span>contact_handler.py</span>
-        <span style="color: #00ff66;">● active</span>
-      </div>
-
-      <!-- Main Headline -->
-      <h2 style="color: #00ff66; margin: 0 0 16px 0; font-size: 32px; font-weight: 700; letter-spacing: -0.5px;">
-        &gt; Let's build something.
-      </h2>
-
-      <!-- Description Block -->
-      <p style="color: #c9d1d9; font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; margin: 0 0 32px 0;">
-        Open to new roles, freelance work, and interesting problems. The fastest way to reach me is directly via my inbox.
-      </p>
-
-      <!-- Executable Contact Fields -->
-      <div class="code-output" style="display: grid; gap: 12px; font-size: 15px; border-left: 2px solid #00ff66; padding-left: 16px; margin-bottom: 32px;">
+  
+      <div class="contact-code-block">
         <div>
-          <span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">email</span> = 
-          <a href="mailto:hemakanthreddy916@gmail.com" class="contact-link" style="color: #a5d6ff; text-decoration: none;">"hemakanthreddy916@gmail.com"</a>;
+          <span class="syntax-keyword">const</span> <span class="syntax-var">email</span> =
+          <a href="mailto:hemakanthreddy916@gmail.com" class="contact-card__email syntax-string">"hemakanthreddy916@gmail.com"</a>;
         </div>
         <div>
-          <span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">status</span> = 
-          <span style="color: #a5d6ff;">"AVAILABLE_FOR_OPPORTUNITIES"</span>;
+          <span class="syntax-keyword">const</span> <span class="syntax-var">status</span> =
+          <span class="syntax-string">"AVAILABLE_FOR_OPPORTUNITIES"</span>;
         </div>
       </div>
-
-      <!-- Navigation Array Footer Links -->
-      <div style="font-size: 15px; padding-top: 16px; border-top: 1px solid #21262d;">
-        <span style="color: #ff7b72;">return</span> [
-          <a href="https://github.com/Hemakanthreddy" target="_blank" rel="noopener" class="nav-accent-link" style="color: #00ff66; text-decoration: none; margin-left: 8px;">GitHub</a>,
-          <a href="#" target="_blank" rel="noopener" class="nav-accent-link" style="color: #00ff66; text-decoration: none; margin-left: 8px;">LinkedIn</a>,
-          <a href="#" target="_blank" rel="noopener" class="nav-accent-link" style="color: #ffffff; text-decoration: none; margin-left: 8px;">Resume ↗</a>
-        ];
+ 
+      <div class="contact-card__links">
+        <span class="syntax-keyword">return</span> <span class="syntax-bracket">[</span>
+        <a href="https://github.com/Hemakanthreddy" target="_blank" rel="noopener">GitHub</a><span class="syntax-bracket">,</span>
+        <a href="https://linkedin.com/in/hemakanth-reddy" target="_blank" rel="noopener">LinkedIn</a><span class="syntax-bracket">,</span>
+        <a href="#" target="_blank" rel="noopener" class="contact-card__resume">Resume ↗</a>
+        <span class="syntax-bracket">]</span>;
       </div>
-
     </div>
   </section>
 </main>
